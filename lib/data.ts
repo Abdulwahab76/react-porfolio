@@ -5,6 +5,7 @@ import { LuGraduationCap } from "react-icons/lu";
 import digital from "@/public/corpcomment.png";
 import estore from "@/public/rmtdev.png";
 import quick from "@/public/wordanalytics.png";
+import momint from '@/public/demo3.png';
 
 export const links = [
   {
@@ -81,6 +82,13 @@ export const projectsData = [
       "I build qucik proposal generator for upwork users.",
     tags: ["React", "Tailwind", 'API', 'Typescript'],
     imageUrl: quick,
+  },
+  {
+    title: "Landing page",
+    description:
+      "I build Momint landing page design",
+    tags: ["React", "Tailwind",],
+    imageUrl: momint,
   },
 ] as const;
 
