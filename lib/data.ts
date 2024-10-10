@@ -2,9 +2,9 @@ import React from "react";
 import { CgWorkAlt } from "react-icons/cg";
 import { FaReact } from "react-icons/fa";
 import { LuGraduationCap } from "react-icons/lu";
-import Digital from "@/public/digital.png";
-import Estore from "@/public/estore.png";
-import Quick from "@/public/qucikpropsal.png";
+import Digital from "../public/digital.png";
+import Estore from "../public/estore.png";
+import Quick from "../public/qucikpropsal.png";
 
 export const links = [
   {
