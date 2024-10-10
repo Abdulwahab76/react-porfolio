@@ -4,8 +4,9 @@ import { useRef } from "react";
 import { projectsData } from "@/lib/data";
 import Image from "next/image";
 import { motion, useScroll, useTransform } from "framer-motion";
+import corpcommentImg from "@/public/corpcomment.png";
 
-type ProjectProps = (typeof projectsData)[number];
+type ProjectProps = (typeof projectsData)[number ];
 
 export default function Project({
   title,
@@ -49,10 +50,10 @@ export default function Project({
         </div>
 
         <Image
-          src={imageUrl}
+         src={imageUrl}
           alt="Project I worked on"
-          quality={95}
-          className="absolute hidden sm:block top-8 -right-40 w-[28.25rem] rounded-t-lg shadow-2xl
+          // quality={95}
+          className="absolute  sm:block top-8 -right-40 w-[28.25rem] rounded-t-lg shadow-2xl
         transition 
         group-hover:scale-[1.04]
         group-hover:-translate-x-3
