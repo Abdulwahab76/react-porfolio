@@ -2,9 +2,9 @@ import React from "react";
 import { CgWorkAlt } from "react-icons/cg";
 import { FaReact } from "react-icons/fa";
 import { LuGraduationCap } from "react-icons/lu";
-import Digital from "../public/digital.png";
-import Estore from "../public/estore.png";
-import Quick from "../public/qucikpropsal.png";
+import digital from "../public/digital.png";
+import estore from "../public/estore.png";
+import quick from "../public/qucikpropsal.png";
 
 export const links = [
   {
@@ -66,21 +66,21 @@ export const projectsData = [
     description:
       "I build this blog project using nextjs for seo optimization.",
     tags: ["React", "Next.js", "MongoDB", "Tailwind", "contentful"],
-    imageUrl: Digital,
+    imageUrl: digital,
   },
   {
     title: "E store Dashboard",
     description:
       "i build e-commerce management dashboard using reactjs ",
     tags: ["React", "TypeScript", "Tailwind", "Redux"],
-    imageUrl: Estore,
+    imageUrl: estore,
   },
   {
     title: "Quick proposal",
     description:
       "I build qucik proposal generator for upwork users.",
     tags: ["React", "Tailwind", 'API', 'Typescript'],
-    imageUrl: Quick,
+    imageUrl: quick,
   },
 ] as const;
 
