@@ -45,7 +45,7 @@ export default function Contact() {
             toast.error(error);
           } else {
             toast.success("Email sent successfully!");
-            e.currentTarget.reset();
+            e.currentTarget?.reset();
           }
 
           setPending(false);
