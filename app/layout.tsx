@@ -6,12 +6,176 @@ import Footer from "@/components/footer";
 import ThemeSwitch from "@/components/theme-switch";
 import ThemeContextProvider from "@/context/theme-context";
 import { Toaster } from "react-hot-toast";
+import type { Metadata } from "next";
 
 const inter = Inter({ subsets: ["latin"] });
 
-export const metadata = {
-  title: "Abdul Wahab | Personal Portfolio",
-  description: "Abdul Wahab is a Frontend developer with 1 years of experience.",
+// Enhanced SEO Metadata
+export const metadata: Metadata = {
+  metadataBase: new URL('https://frontenddev-porfolio.netlify.app'),
+  title: {
+    default: 'Abdul Wahab | Frontend Developer | React & Next.js Specialist',
+    template: '%s | Abdul Wahab'
+  },
+  description: 'Experienced Frontend Developer specializing in React, Next.js, and TypeScript. Building responsive, high-performance web applications with modern UI/UX. Based in Karachi, Pakistan. Available for freelance and full-time opportunities.',
+  keywords: [
+    'Frontend Developer',
+    'React Developer',
+    'Next.js Developer',
+    'Web Developer',
+    'JavaScript Developer',
+    'TypeScript',
+    'Tailwind CSS',
+    'Portfolio',
+    'Karachi Developer',
+    'Pakistan Developer',
+    'Freelance Developer',
+    'UI/UX Developer'
+  ],
+  authors: [{ name: 'Abdul Wahab', url: 'https://frontenddev-porfolio.netlify.app' }],
+  creator: 'Abdul Wahab',
+  publisher: 'Abdul Wahab',
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
+  openGraph: {
+    type: 'website',
+    locale: 'en_US',
+    url: 'https://frontenddev-porfolio.netlify.app',
+    title: 'Abdul Wahab | Frontend Developer | React & Next.js Specialist',
+    description: 'Experienced Frontend Developer specializing in React, Next.js, and TypeScript. Building responsive, high-performance web applications.',
+    siteName: 'Abdul Wahab Portfolio',
+    images: [
+      {
+        url: '/og-image.jpg', // Create this image (1200x630px)
+        width: 1200,
+        height: 630,
+        alt: 'Abdul Wahab - Frontend Developer Portfolio',
+      }
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Abdul Wahab | Frontend Developer',
+    description: 'Frontend Developer specializing in React, Next.js, and TypeScript',
+    images: ['/og-image.jpg'],
+    creator: '@yourtwitter', // Add your Twitter handle
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+  verification: {
+    google: 'google-site-verification=QuPlDbG0Ie9lm0FwH4oG6C7dFBbCtN5TyMXFFJaO23c',
+  },
+  alternates: {
+    canonical: 'https://frontenddev-porfolio.netlify.app',
+  },
+  category: 'technology',
+};
+
+// JSON-LD Structured Data
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  name: 'Abdul Wahab',
+  url: 'https://frontenddev-porfolio.netlify.app',
+  image: 'https://frontenddev-porfolio.netlify.app/profile-pic.png',
+  jobTitle: 'Frontend Developer',
+  description: 'Frontend Developer specializing in React, Next.js, and TypeScript',
+  email: 'abdulwahab12.pk@gmail.com',
+  address: {
+    '@type': 'PostalAddress',
+    addressLocality: 'Karachi',
+    addressRegion: 'Sindh',
+    addressCountry: 'PK'
+  },
+  sameAs: [
+    'https://github.com/Abdulwahab76',
+    'https://www.linkedin.com/in/aws-abdul-wahab/',
+  ],
+  knowsAbout: [
+    'React',
+    'Next.js',
+    'TypeScript',
+    'JavaScript',
+    'Web Development',
+    'Frontend Development',
+    'Tailwind CSS',
+    'Redux',
+    'HTML',
+    'CSS',
+    'Wordpress'
+  ],
+  alumniOf: {
+    '@type': 'EducationalOrganization',
+    name: 'DIMT'
+  },
+  workExample: [
+    {
+      '@type': 'CreativeWork',
+      name: 'Digital Dialogue',
+      description: 'Blog project built with Next.js for SEO optimization',
+      url: 'https://frontenddev-porfolio.netlify.app#projects'
+    },
+    {
+      '@type': 'CreativeWork',
+      name: 'E-store Dashboard',
+      description: 'E-commerce management dashboard using React.js',
+      url: 'https://frontenddev-porfolio.netlify.app#projects'
+    },
+    {
+      '@type': 'CreativeWork',
+      name: 'Quick Proposal',
+      description: 'Proposal generator for Upwork users',
+      url: 'https://frontenddev-porfolio.netlify.app#projects'
+    }
+  ],
+  hasOccupation: {
+    '@type': 'Occupation',
+    name: 'Frontend Developer',
+    occupationLocation: {
+      '@type': 'City',
+      name: 'Karachi'
+    },
+    skills: 'React, Next.js, TypeScript, JavaScript, Tailwind CSS, Redux, Wordpress'
+  }
+};
+
+const websiteJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  name: 'Abdul Wahab Portfolio',
+  url: 'https://frontenddev-porfolio.netlify.app',
+  description: 'Frontend Developer Portfolio showcasing React and Next.js projects',
+  author: {
+    '@type': 'Person',
+    name: 'Abdul Wahab'
+  },
+  inLanguage: 'en-US'
+};
+
+const profilePageJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'ProfilePage',
+  dateCreated: '2024-01-01T00:00:00+00:00',
+  dateModified: new Date().toISOString(),
+  mainEntity: {
+    '@type': 'Person',
+    name: 'Abdul Wahab',
+    alternateName: 'Abdul Wahab Frontend Developer',
+    description: 'Frontend Developer specializing in React and Next.js',
+    image: 'https://frontenddev-porfolio.netlify.app/profile-pic.png'
+  }
 };
 
 export default function RootLayout({
@@ -21,6 +185,32 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="!scroll-smooth">
+      <head>
+        {/* JSON-LD Structured Data */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(profilePageJsonLd) }}
+        />
+
+        {/* Additional Meta Tags */}
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+        <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
+        <meta name="theme-color" content="#1f2937" media="(prefers-color-scheme: dark)" />
+
+        {/* Favicon */}
+        <link rel="icon" href="/favicon.ico" sizes="any" />
+        <link rel="icon" href="/icon.svg" type="image/svg+xml" />
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+        <link rel="manifest" href="/manifest.json" />
+      </head>
       <body
         className={`${inter.className} bg-gray-50 text-gray-950 relative pt-28 sm:pt-36 dark:bg-gray-900 dark:text-gray-50 dark:text-opacity-90`}
       >
@@ -30,7 +220,7 @@ export default function RootLayout({
         <ThemeContextProvider>
           <ActiveSectionContextProvider>
             <Header />
-            {children}
+            <main>{children}</main>
             <Footer />
 
             <Toaster position="top-right" />
