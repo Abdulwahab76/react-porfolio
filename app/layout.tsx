@@ -7,6 +7,7 @@ import ThemeSwitch from "@/components/theme-switch";
 import ThemeContextProvider from "@/context/theme-context";
 import { Toaster } from "react-hot-toast";
 import type { Metadata } from "next";
+import { projectsData } from "@/lib/data";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -74,9 +75,6 @@ export const metadata: Metadata = {
       'max-snippet': -1,
     },
   },
-  verification: {
-    google: 'google-site-verification=QuPlDbG0Ie9lm0FwH4oG6C7dFBbCtN5TyMXFFJaO23c',
-  },
   alternates: {
     canonical: 'https://frontenddev-porfolio.netlify.app',
   },
@@ -84,72 +82,64 @@ export const metadata: Metadata = {
 };
 
 // JSON-LD Structured Data
+// Map projects to structured data format
+const projectsJsonLd = projectsData.map(project => ({
+  "@type": "CreativeWork",
+  name: project.title,
+  description: project.description,
+  url: project.url,
+  image: project.imageUrl ? `https://frontenddev-porfolio.netlify.app${project.imageUrl.src ?? project.imageUrl}` : undefined,
+  keywords: project.tags.join(", ")
+}));
+
 const jsonLd = {
-  '@context': 'https://schema.org',
-  '@type': 'Person',
-  name: 'Abdul Wahab',
-  url: 'https://frontenddev-porfolio.netlify.app',
-  image: 'https://frontenddev-porfolio.netlify.app/profile-pic.png',
-  jobTitle: 'Frontend Developer',
-  description: 'Frontend Developer specializing in React, Next.js, and TypeScript',
-  email: 'abdulwahab12.pk@gmail.com',
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: "Abdul Wahab",
+  url: "https://frontenddev-porfolio.netlify.app",
+  image: "https://frontenddev-porfolio.netlify.app/profile-pic.png",
+  jobTitle: "Frontend Developer",
+  description: "Frontend Developer specializing in React, Next.js, and TypeScript",
+  email: "abdulwahab12.pk@gmail.com",
   address: {
-    '@type': 'PostalAddress',
-    addressLocality: 'Karachi',
-    addressRegion: 'Sindh',
-    addressCountry: 'PK'
+    "@type": "PostalAddress",
+    addressLocality: "Karachi",
+    addressRegion: "Sindh",
+    addressCountry: "PK"
   },
   sameAs: [
-    'https://github.com/Abdulwahab76',
-    'https://www.linkedin.com/in/aws-abdul-wahab/',
+    "https://github.com/Abdulwahab76",
+    "https://www.linkedin.com/in/aws-abdul-wahab/"
   ],
   knowsAbout: [
-    'React',
-    'Next.js',
-    'TypeScript',
-    'JavaScript',
-    'Web Development',
-    'Frontend Development',
-    'Tailwind CSS',
-    'Redux',
-    'HTML',
-    'CSS',
-    'Wordpress'
+    "React",
+    "Next.js",
+    "TypeScript",
+    "JavaScript",
+    "Web Development",
+    "Frontend Development",
+    "Tailwind CSS",
+    "Redux",
+    "HTML",
+    "CSS",
+    "Wordpress"
   ],
   alumniOf: {
-    '@type': 'EducationalOrganization',
-    name: 'DIMT'
+    "@type": "EducationalOrganization",
+    name: "DIMT"
   },
-  workExample: [
-    {
-      '@type': 'CreativeWork',
-      name: 'Digital Dialogue',
-      description: 'Blog project built with Next.js for SEO optimization',
-      url: 'https://frontenddev-porfolio.netlify.app#projects'
-    },
-    {
-      '@type': 'CreativeWork',
-      name: 'E-store Dashboard',
-      description: 'E-commerce management dashboard using React.js',
-      url: 'https://frontenddev-porfolio.netlify.app#projects'
-    },
-    {
-      '@type': 'CreativeWork',
-      name: 'Quick Proposal',
-      description: 'Proposal generator for Upwork users',
-      url: 'https://frontenddev-porfolio.netlify.app#projects'
-    }
-  ],
+  workExample: projectsJsonLd,
   hasOccupation: {
-    '@type': 'Occupation',
-    name: 'Frontend Developer',
+    "@type": "Occupation",
+    name: "Frontend Developer",
     occupationLocation: {
-      '@type': 'City',
-      name: 'Karachi'
+      "@type": "City",
+      name: "Karachi"
     },
-    skills: 'React, Next.js, TypeScript, JavaScript, Tailwind CSS, Redux, Wordpress'
+    skills: "React, Next.js, TypeScript, JavaScript, Tailwind CSS, Redux, Wordpress"
   }
 };
+
 
 const websiteJsonLd = {
   '@context': 'https://schema.org',
