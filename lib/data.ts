@@ -5,7 +5,7 @@ import { LuGraduationCap } from "react-icons/lu";
 import digital from "@/public/corpcomment.png";
 import estore from "@/public/rmtdev.png";
 import quick from "@/public/wordanalytics.png";
- 
+
 export const links = [
   {
     name: "Home",
@@ -26,6 +26,10 @@ export const links = [
   {
     name: "Experience",
     hash: "#experience",
+  },
+  {
+    name: "Blogs",
+    hash: "/blogs",
   },
   {
     name: "Contact",
@@ -82,7 +86,7 @@ export const projectsData = [
     tags: ["React", "Tailwind", 'API', 'Typescript'],
     imageUrl: quick,
   },
- 
+
 ] as const;
 
 export const skillsData = [

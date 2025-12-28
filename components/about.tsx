@@ -19,15 +19,12 @@ export default function About() {
     >
       <SectionHeading>About me</SectionHeading>
       <p className="mb-3">
-  Hello there! I'm <span className="font-medium">Abdul Wahab </span>, a skilled Front-End Web Developer with over 1 year of experience
-  <span className="font-medium">full-stack web development</span>. My core stack includes{" "}
-  <span className="font-medium">HTML, CSS, JavaScript, React.js, Material UI, and Tailwind CSS</span>. I love creating modern websites and web applications that work smoothly on any device. 
-  <span className="italic">My favorite part of programming</span> is the problem-solving aspect. I <span className="underline">love</span> the feeling of finally figuring out a solution to a problem. I am also familiar with TypeScript and Prisma, and I am always looking to learn new technologies. I am currently seeking a{" "}
-  <span className="font-medium">full-time position</span> as a software developer.
-</p>
-
-
-
+        Hello there! I'm <span className="font-medium">Abdul Wahab </span>, a skilled Front-End Web Developer with over 1 year of experience
+        <span className="font-medium">full-stack web development</span>. My core stack includes{" "}
+        <span className="font-medium">HTML, CSS, JavaScript, React.js, Material UI, and Tailwind CSS</span>. I love creating modern websites and web applications that work smoothly on any device.
+        <span className="italic">My favorite part of programming</span> is the problem-solving aspect. I <span className="underline">love</span> the feeling of finally figuring out a solution to a problem. I am also familiar with TypeScript and Prisma, and I am always looking to learn new technologies. I am currently seeking a{" "}
+        <span className="font-medium">full-time position</span> as a software developer.
+      </p>
     </motion.section>
   );
 }
