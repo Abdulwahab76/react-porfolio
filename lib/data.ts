@@ -4,8 +4,10 @@ import { FaReact } from "react-icons/fa";
 import { LuGraduationCap } from "react-icons/lu";
 import digital from "@/public/corpcomment.png";
 import estore from "@/public/rmtdev.png";
-import quick from "@/public/wordanalytics.png";
-
+// import quick from "@/public/wordanalytics.png";
+import timezee from '@/public/timezee-watch.png';
+import hcApp from '@/public/hc-web.png';
+import shop from '@/public/shopco.png';
 export const links = [
   {
     name: "Home",
@@ -66,27 +68,51 @@ export const experiencesData = [
 
 export const projectsData = [
   {
+    title: "Timezee Watch Store",
+    description:
+      "A modern e-commerce platform for luxury watches with product catalog, cart functionality, and responsive design using shadcn/ui components.",
+    tags: ["React", "Next.js", "Tailwind CSS", "shadcn/ui", "TypeScript"],
+    imageUrl: timezee,
+    url: 'http://timezee-five.vercel.app/'
+  },
+  {
+    title: 'SHOP.CO',
+    description: 'A responsive and user-friendly shoes e-commerce website built with React.js and Tailwind CSS, powered by Firebase for authentication, database.',
+    tags: ['React', 'Tailwind CSS', 'Firebase', 'Context API', 'E-commerce'],
+    imageUrl: shop,
+    url: 'https://ecommerce-platform-zeta-one.vercel.app/'
+  },
+  {
+    title: 'Height Comparison Web app',
+    description:
+      'A web application that allows users to compare their height with famous personalities using React and Tailwind CSS for a responsive design.',
+    tags: ['React', 'Tailwind CSS', 'Nextjs', 'Typescript', 'API Integration'],
+    imageUrl: hcApp,
+    url: 'https://hc-calculator-olive.vercel.app/'
+  },
+  {
     title: "Digital Dialogue",
     description:
-      "I build this blog project using nextjs for seo optimization.",
-    tags: ["React", "Next.js", "MongoDB", "Tailwind", "contentful"],
+      "SEO-optimized blog platform with server-side rendering, Contentful CMS integration, and MongoDB database for efficient content management.",
+    tags: ["React", "Next.js", "MongoDB", "Tailwind", "Contentful"],
     imageUrl: digital,
+    url: 'https://digital-dialogue.vercel.app/'
   },
   {
-    title: "E store Dashboard",
+    title: "E-Store Dashboard",
     description:
-      "i build e-commerce management dashboard using reactjs ",
-    tags: ["React", "TypeScript", "Tailwind", "Redux"],
+      "Admin dashboard for e-commerce management featuring real-time analytics, inventory tracking, and Redux state management with TypeScript.",
+    tags: ["React", "TypeScript", "Tailwind", "Redux", "Charts"],
     imageUrl: estore,
+    url: 'https://e-store-dashboard.vercel.app/dashboard'
   },
-  {
-    title: "Quick proposal",
-    description:
-      "I build qucik proposal generator for upwork users.",
-    tags: ["React", "Tailwind", 'API', 'Typescript'],
-    imageUrl: quick,
-  },
-
+  // {
+  //   title: "Quick Proposal Generator",
+  //   description:
+  //     "AI-powered tool for freelancers to generate professional Upwork proposals instantly with customizable templates and API integration.",
+  //   tags: ["React", "TypeScript", "Tailwind", "REST API", "AI Integration"],
+  //   imageUrl: quick,
+  // },
 ] as const;
 
 export const skillsData = [
@@ -98,6 +124,10 @@ export const skillsData = [
   "Next.js",
   "Git",
   "Tailwind",
-  "Redux",
+  "Redux Toolkit",
   "Framer Motion",
+  "Shadecn/ui",
+  "Firebase",
+  "Appwrite",
+  "Wordpress"
 ] as const;
