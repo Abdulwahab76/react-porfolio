@@ -6,7 +6,7 @@ import digital from "@/public/corpcomment.png";
 import estore from "@/public/rmtdev.png";
 // import quick from "@/public/wordanalytics.png";
 import timezee from '@/public/timezee-watch.png';
-import hcApp from '@/public/hc-web.png';
+import hcWebApp from '@/public/hc-web.png';
 import shop from '@/public/shopco.png';
 export const links = [
   {
@@ -87,7 +87,7 @@ export const projectsData = [
     description:
       'A web application that allows users to compare their height with famous personalities using React and Tailwind CSS for a responsive design.',
     tags: ['React', 'Tailwind CSS', 'Nextjs', 'Typescript', 'API Integration'],
-    imageUrl: hcApp,
+    imageUrl: hcWebApp,
     url: 'https://hc-calculator-olive.vercel.app/'
   },
   {
