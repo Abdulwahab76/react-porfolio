@@ -82,7 +82,7 @@ export default function Project({
           >
             <h3 className="text-2xl font-semibold">{title}</h3>
 
-            <p className="mt-2 leading-relaxed text-gray-700 dark:text-white/70">
+            <p className="mt-2 leading-relaxed text-gray-950 dark:text-white/70">
               {description}
             </p>
 
