@@ -61,16 +61,34 @@ export default function Intro() {
       </div>
 
       <motion.h1
-        className="mb-10 mt-4 px-4 text-2xl font-medium !leading-[1.5] sm:text-4xl"
+        className="mb-4 text-4xl mt-3 font-bold leading-tight sm:text-6xl"
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
       >
-        <span className="font-bold">Hello, I'm Abdul Wahab</span> I'm a{" "}
-        <span className="font-bold">Frontend developer</span> with{" "}
-        <span className="font-bold">1+ years</span> of experience. I develop
-        <span className="italic">Web apps</span>. My focus is
-        <span className="underline"> React (Next.js)</span>.
+        I Build Web Apps That{" "}
+        <span className="bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
+          Drive Results
+        </span>
       </motion.h1>
+
+      <motion.p
+        className="mb-4 text-xl font-medium sm:text-2xl"
+        initial={{ opacity: 0, y: 100 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.1 }}
+      >
+        Abdul Wahab Frontend Developer specializing in{" "}
+        <span className="font-bold text-purple-600">React & Next.js</span>
+      </motion.p>
+
+      <motion.p
+        className="mb-10 text-lg text-gray-600 dark:text-gray-800"
+        initial={{ opacity: 0, y: 100 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.2 }}
+      >
+        1+ year building fast, scalable applications.
+      </motion.p>
 
       <motion.div
         className="flex flex-col sm:flex-row items-center justify-center gap-2 px-4 text-lg font-medium"
