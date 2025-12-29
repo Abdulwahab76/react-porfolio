@@ -8,6 +8,7 @@ import ThemeContextProvider from "@/context/theme-context";
 import { Toaster } from "react-hot-toast";
 import type { Metadata } from "next";
 import { projectsData } from "@/lib/data";
+import CustomCursor from "@/components/customCursor";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -50,7 +51,7 @@ export const metadata: Metadata = {
     siteName: 'Abdul Wahab Portfolio',
     images: [
       {
-        url: '/og-image.jpg', // Create this image (1200x630px)
+        url: 'https://frontenddev-porfolio.netlify.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fprofile-pic.dcd79e15.png&w=256&q=95', // Create this image (1200x630px)
         width: 1200,
         height: 630,
         alt: 'Abdul Wahab - Frontend Developer Portfolio',
@@ -61,7 +62,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Abdul Wahab | Frontend Developer',
     description: 'Frontend Developer specializing in React, Next.js, and TypeScript',
-    images: ['/og-image.jpg'],
+    images: ['https://frontenddev-porfolio.netlify.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fprofile-pic.dcd79e15.png&w=256&q=95'],
     creator: '@yourtwitter', // Add your Twitter handle
   },
   robots: {
@@ -204,11 +205,13 @@ export default function RootLayout({
       <body
         className={`${inter.className} bg-gray-50 text-gray-950 relative pt-28 sm:pt-36 dark:bg-gray-900 dark:text-gray-50 dark:text-opacity-90`}
       >
+        <CustomCursor />
         <div className="bg-[#fbe2e3] absolute top-[-6rem] -z-10 right-[11rem] h-[31.25rem] w-[31.25rem] rounded-full blur-[10rem] sm:w-[68.75rem] dark:bg-[#946263]"></div>
         <div className="bg-[#dbd7fb] absolute top-[-1rem] -z-10 left-[-35rem] h-[31.25rem] w-[50rem] rounded-full blur-[10rem] sm:w-[68.75rem] md:left-[-33rem] lg:left-[-28rem] xl:left-[-15rem] 2xl:left-[-5rem] dark:bg-[#676394]"></div>
 
         <ThemeContextProvider>
           <ActiveSectionContextProvider>
+
             <Header />
             <main>{children}</main>
             <Footer />
