@@ -63,7 +63,7 @@ export const metadata: Metadata = {
     title: 'Abdul Wahab | Frontend Developer',
     description: 'Frontend Developer specializing in React, Next.js, and TypeScript',
     images: ['https://frontenddev-porfolio.netlify.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fprofile-pic.dcd79e15.png&w=256&q=95'],
-    creator: '@yourtwitter', // Add your Twitter handle
+    creator: 'https://x.com/AbdulWahabSid18', // Add your Twitter handle
   },
   robots: {
     index: true,
