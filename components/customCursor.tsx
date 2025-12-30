@@ -31,7 +31,7 @@ export default function CustomCursor() {
             elements.forEach(el => {
                 el.removeEventListener("mouseenter", enter);
                 el.removeEventListener("mouseleave", leave);
-            });
+            })
         };
     }, []);
 
@@ -43,7 +43,7 @@ export default function CustomCursor() {
             {/* OUTLINE (TRAILING) */}
             <motion.div
                 className="pointer-events-none fixed left-0 top-0 z-[9999]
-        h-10 w-10 rounded-full border border-gray-900
+        h-10 w-10 rounded-full border border-gray-900  md:block hidden
         dark:border-white"
                 animate={{
                     x: mouse.x - 20,
