@@ -46,7 +46,7 @@ export default function Project({
         {/* ✅ IMAGE */}
         <div
           className="
-              relative w-full h-56
+              relative w-full h-56 mt-0 md:mt-12
               sm:absolute sm:top-8 sm:-right-40 sm:h-auto sm:w-[28.25rem]
               sm:group-even:right-[initial] sm:group-even:-left-40
             "
@@ -104,14 +104,14 @@ export default function Project({
           {/* ✅ BUTTONS SECTION */}
           <div className="flex gap-2 mt-4">
             {/* Live Button */}
-            <Link target="_blank" rel="noopener noreferrer" href={url}><button className="bg-gray-900 cursor-pointer text-white rounded-full px-4 py-1 text-sm transition-all hover:bg-gray-800 focus:ring-2 focus:ring-gray-300 dark:bg-gray-700 dark:hover:bg-gray-600 dark:focus:ring-gray-500">
+            <Link target="_blank" rel="noopener noreferrer" href={url}><button className="bg-gray-900 cursor-pointer text-white rounded-full px-4 py-1 text-sm transition-all hover:bg-gray-800 focus:ring-2 focus:ring-gray-300 dark:bg-gray-600 dark:hover:bg-gray-600 dark:focus:ring-gray-500">
               Live
             </button>
             </Link>
 
             {/* GitHub Button */}
             <Link target="_blank" rel="noopener noreferrer" href={url}>
-              <button className="bg-transparent border-2 cursor-pointer border-gray-900 text-gray-900 rounded-full px-4 py-1 text-sm transition-all hover:bg-gray-900 hover:text-white focus:ring-2 focus:ring-gray-300 dark:border-white dark:text-white dark:hover:bg-white dark:hover:text-gray-900 dark:focus:ring-gray-500">
+              <button className="bg-transparent border-[1px] cursor-pointer border-gray-900 text-gray-900 rounded-full px-4 py-1 text-sm transition-all hover:bg-gray-900 hover:text-white focus:ring-2 focus:ring-gray-300 dark:border-white dark:text-white dark:hover:bg-white dark:hover:text-gray-900 dark:focus:ring-gray-500">
                 Github
               </button>
             </Link>

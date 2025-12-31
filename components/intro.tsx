@@ -66,7 +66,7 @@ export default function Intro() {
         animate={{ opacity: 1, y: 0 }}
       >
         I Build Web Apps That{" "}
-        <span className="bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
+        <span className="bg-gradient-to-r dark:from-purple-400 dark:to-pink-500 from-purple-600 to-pink-600 bg-clip-text text-transparent">
           Drive Results
         </span>
       </motion.h1>
@@ -78,11 +78,11 @@ export default function Intro() {
         transition={{ delay: 0.1 }}
       >
         Abdul Wahab Frontend Developer specializing in{" "}
-        <span className="font-bold text-purple-600">React & Next.js</span>
+        <span className="font-bold text-purple-600 dark:text-purple-500">React & Next.js</span>
       </motion.p>
 
       <motion.p
-        className="mb-10 text-lg text-gray-600 dark:text-gray-800"
+        className="mb-10 text-lg text-gray-600 dark:text-white"
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.2 }}
